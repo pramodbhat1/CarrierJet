@@ -1,0 +1,2 @@
+class Carrierknowledghe < ApplicationRecord
+end

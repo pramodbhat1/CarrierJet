@@ -1,0 +1,2 @@
+class sect < ApplicationController
+end

@@ -1,0 +1,2 @@
+class Firstpage < ApplicationRecord
+end

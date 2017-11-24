@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Nexts</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Connection</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @nexts.each do |next| %>
+      <tr>
+        <td><%= next.connection %></td>
+        <td><%= link_to 'Show', next %></td>
+        <td><%= link_to 'Edit', edit_next_path(next) %></td>
+        <td><%= link_to 'Destroy', next, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Next', new_next_path %>

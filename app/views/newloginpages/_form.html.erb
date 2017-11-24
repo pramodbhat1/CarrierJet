@@ -1,0 +1,17 @@
+<%= form_with(model: newloginpage, local: true) do |form| %>
+  <% if newloginpage.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(newloginpage.errors.count, "error") %> prohibited this newloginpage from being saved:</h2>
+
+      <ul>
+      <% newloginpage.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

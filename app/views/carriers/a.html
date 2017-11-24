@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>learning</title>
+</head>
+<body  id="bd">
+<form method="post" name="myform" onsubmit="return validat()">
+	
+	<div>
+		<label>Firstname</label>
+		<input type="text" name="Firstname">
+
+	</div>
+<br>
+	<div>
+		<label>Lastname</label>
+		<input type="text" name="Lastname">
+
+	</div>
+<br>
+<div>
+	<label>Background</label>
+     <select name="background" onchange="change(this)">
+     	<option value="red">Red</option>
+     	<option value="green">Green</option>
+     	<option value="yellow">Yellow</option>
+
+     </select>
+
+</div>
+</br>
+<input type="submit" >
+</form>
+</div>
+<script>
+	// function change(x){
+
+	// console.log(x.value);
+	// var b=document.getElementById('bd');
+	// b.style.backgroundColor=x.value;
+
+
+	// }
+	function validat(){
+
+		var firstname = document.forms["myform"]["Firstname"].value;
+        // console.log(firstname)
+  if (firstname== null || firstname == '' ) {
+  	alert('not null')
+  	return false;
+  }      
+  if(firstname.length < 3)
+  {
+  	alert('must be 3')
+  	return false;
+  }
+
+
+    // console.log(firstname)
+  // if (firstname== null || firstname == '') {
+  // 	alert('not null');
+  //  return false;
+  // }    
+
+    	}
+</script>
+</body>
+</html>
+
+
+<script >
+	function sayhellow(who){
+
+		document.write("hellow"+who	);
+	}
+
+</script>
+
+<script >
+	sayhellow("bob");
+	// document.write("<br>");
+	sayhellow("marry");
+</script>
+</form>
+</body>
+</html>

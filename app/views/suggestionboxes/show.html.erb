@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Langvage:</strong>
+  <%= @suggestionbox.langvage %>
+</p>
+
+<p>
+  <strong>Bestcombination:</strong>
+  <%= @suggestionbox.bestcombination %>
+</p>
+
+<%= link_to 'Edit', edit_suggestionbox_path(@suggestionbox) %> |
+<%= link_to 'Back', suggestionboxes_path %>

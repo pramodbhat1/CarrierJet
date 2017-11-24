@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html>
+
+   <head>
+      <title>carrerjet</title>
+   </head>
+
+   <body>
+      <table width = " 100%"  height ="100%">
+
+
+         
+         <tr>
+            <td colspan = "2" bgcolor = "yellow" width = "100%" height="100px">
+
+
+               <h1 style="text-align: center;text-shadow:2px 2px #ff0000; "><b><u><i>WELCOME TO CARRIERJET </i></u><b></h1><br>
+                <h2 style="text-align: center"><b>EVERY CHALLENGES BECOMES AN OPPORTUNITY WHEN WE ARE EXITED ABOUT IT</b></h1>
+       <p class="notice"><%= notice %></p>
+       <p class="alert"><%= alert %></p>
+ 
+      <% if !user_signed_in? %>
+      <%= link_to 'Sign in', new_user_session_path %> <br>
+      <%= link_to 'Sign up', new_user_registration_path %> 
+   <% end %>
+   <% if user_signed_in? %>
+   <%= link_to('Logout', destroy_user_session_path, :method => :delete)  %>
+   <% end %>
+
+               
+            </td>
+         </tr>
+         <tr valign = "top" >
+            <td bgcolor = "#9c9" width = "10%" height="100%">
+               <b>Main Menu</b><br />
+               
+               <ul>
+<li><a href="http://www....">Home</a></li>
+<li><a href="http://www..../faq">Questions</a></li>
+<li><a href="http://www..../news">News</a></li>
+<li><a href="http://www..../contact">Contact</a></li>
+</ul>
+            </td>
+                 
+
+            <td id="boxy" bgcolor = "#F1C40F  " width = "100" height = "590px" >
+
+
+
+
+                  <h1 style="text-color: red;text-align: center;text-shadow: 2px 2px #ff0000;"><u>SELECT YOUR JET FOR CARRIER PATH TO GET BEST CARRIER
+</u></h1>          
+                  <h1 style="text-align: center">
+                     <!--   <%= link_to 'New Search', jobs_path %><br>
+                      <%= link_to 'CARRIER JOB FIND', new_job_path%> <br>
+                      -->   
+                      <%= link_to 'CARRIER JOB FIND', myjobs_path %>       
+   <br><br>
+                     
+                       <%= link_to 'CARRIER KNOWLEDGE', carrierknowledghes_path %>  <br>
+                       
+<br>
+                         <%=  link_to 'CARRIER GUIDENCE', suggestionboxes_path %>  <br>
+                        
+                        <br>
+                    <%= link_to 'CARRIER TRACKING SYSTEM', carriers_path %>  <br><br>
+                  
+                      <%=  link_to 'CARRIER GROUP CHAT', chats_path %>  <br>  
+                      <br>
+
+ <%= link_to 'CARRIER REFERENCES', suggestionboxes_path %>  <br> <br>
+ <br>
+ 
+<hr>
+          <marquee>
+          <h1>LATEST  JOB NEWS:-Job Openings in Bitla Software at 29/11/2017
+         <!--  </h2><br>
+          <h2>
+            Job Openings in Accenture at 31/11/2017
+          </h2>
+
+                     </h1> -->
+                              </marquee>
+
+  
+            </td>
+           
+
+         </tr>
+        
+<!--         </div>
+ -->      </table>
+   </body>
+
+</html>
+  </body>
+</html>
+
+
+
+

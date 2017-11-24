@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  company: MyString
+  referealid: 1
+  Location: MyString
+  Experince_in_year: 1
+  technology: MyString
+
+two:
+  name: MyString
+  company: MyString
+  referealid: 1
+  Location: MyString
+  Experince_in_year: 1
+  technology: MyString

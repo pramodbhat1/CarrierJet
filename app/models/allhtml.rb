@@ -1,0 +1,2 @@
+class Allhtml < ApplicationRecord
+end

@@ -1,0 +1,50 @@
+<p id="notice"><%= notice %></p>
+
+<h1 style="text-align: center;text-shadow:   text-shadow: 2px 2px #ff0000;"><u>SEARCH YOUR JOBS BY YOUR COMANY,TECHNOLOGY,EXPERINCE ,PACKAGE AND LOCATION:- <u></h1>
+<h1 style="text-align: center;background-color: yellow">
+<%= form_tag  myjobs_path ,:method =>'get' do %>
+<%= text_field_tag :search_com ,params[:search_exp],placeholder: 'Enter Company' %>
+
+<%= text_field_tag :search_location ,params[:search_location], placeholder: 'Enter Location' %>
+<%= text_field_tag :search_exp ,params[:search_exp],placeholder: 'Enter Experince' %>
+<%= text_field_tag :search_tec ,params[:search_tec],placeholder: 'Enter Technology' %>
+<br> 
+<h1 style="text-align: center">   
+<%= submit_tag "CLICK HERE" %>
+<% end %>
+</h1>
+
+<div style="background-color: yellow"> 
+<h1 style="text-align: center"><u> YOUR MATCHING JOBS ARE </u> </h1>
+<table height="300px" width="678px">
+  <thead>
+    <tr>
+      <th width="200px ">Company</th>
+      <th width="200px">Tec</th>
+      <th width="200px">Experince</th>
+      <th width="200px">Pakage</th>
+      <th width="200px">Location</th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @myjobs.each do |myjob| %>
+      <tr>
+        <td><%= myjob.company %></td>
+        <td><%= myjob.technology %></td>
+        <td><%= myjob.experince %></td>
+        <td><%= myjob.pakage %></td>
+        <td><%= myjob.Location %></td>
+        <td><%= link_to 'APPLY', myjob %></td>
+        <td><%= link_to 'Edit', edit_myjob_path(myjob) %></td>
+        <td><%= link_to 'Destroy', myjob, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+</div>
+
+<br>
+<h1 style="text-align: center">
+<%= link_to 'UPLOAD NEW JOBS', new_myjob_path %> </h1>

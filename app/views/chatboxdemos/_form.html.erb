@@ -1,0 +1,17 @@
+<%= form_with(model: chatboxdemo, local: true) do |form| %>
+  <% if chatboxdemo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(chatboxdemo.errors.count, "error") %> prohibited this chatboxdemo from being saved:</h2>
+
+      <ul>
+      <% chatboxdemo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

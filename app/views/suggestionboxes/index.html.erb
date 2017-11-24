@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+
+<h1 style="text-align: center;"><u>CARRIER TECHNOLOGY COMBINATIONS</u></h1>
+
+<h1 style="text-align: center;center;">
+<%= form_tag  suggestionboxes_path ,:method =>'get' do %>
+<%= text_field_tag :search ,params[:search],placeholder: 'Enter Langvage U Know' %>
+<br>
+<h1 style="text-align: center">
+  
+<%= submit_tag "CLICK HERE" %>
+</h1>
+<% end %>
+ 
+</tr>
+<table style="text-color:  yellow;">
+  <thead style="text-align: center">
+    <tr>
+   <!--   -->
+      <th ><h3>-------------------------------------------------------Best combinations are -----------------------------------------------------
+      </h3></th>
+      <th colspan="2"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @suggestionboxes.each do |suggestionbox| %>
+      <tr height="56px">
+<!--         <td><%= suggestionbox.langvage %></td>
+ -->         <h1 style="text-shadow:   text-shadow: 2px 2px #ff0000;"> <td><%= suggestionbox.bestcombination  %> </td> </h1>
+        <!--<td><%= link_to 'Advantage', suggestionbox , data: { confirm: 'It Will Increse Your Chance of Getting Job' }%></td>
+        <td><%= link_to 'Suggestion', edit_suggestionbox_path(suggestionbox) , data: { confirm: 'Better u learn new technology To achive Carrier Growth' }%></td>
+        <td><%= link_to 'Delete Combination', suggestionbox, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
+        <br>
+        </tr>
+        <tr>
+<!--         <td height="290px"><%= link_to 'New Suggestionbox', new_suggestionbox_path %></td>
+ -->      </tr>
+    <% end %>
+  </tbody>
+</table>
+</table>
+<br>
+
+</div>

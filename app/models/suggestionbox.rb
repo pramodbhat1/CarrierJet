@@ -1,0 +1,2 @@
+class Suggestionbox < ApplicationRecord
+end

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @adminref.name %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @adminref.company %>
+</p>
+
+<p>
+  <strong>Referealid:</strong>
+  <%= @adminref.referealid %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @adminref.Location %>
+</p>
+
+<p>
+  <strong>Experince in year:</strong>
+  <%= @adminref.Experince_in_year %>
+</p>
+
+<p>
+  <strong>Technology:</strong>
+  <%= @adminref.technology %>
+</p>
+
+<%= link_to 'Edit', edit_adminref_path(@adminref) %> |
+<%= link_to 'Back', adminrefs_path %>

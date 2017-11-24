@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  com: MyString
+  tec: MyText
+  exp: 1
+  ope: 1
+  pkg: 1
+
+two:
+  com: MyString
+  tec: MyText
+  exp: 1
+  ope: 1
+  pkg: 1

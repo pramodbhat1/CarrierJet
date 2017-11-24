@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @latestnews.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @latestnews.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= @latestnews.image %>
+</p>
+
+<%= link_to 'Edit', edit_latestnews_path(@latestnews) %> |
+<%= link_to 'Back', latestnews_index_path %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  company: MyString
+  technology: MyString
+  experince: 1
+  pakage: 1
+  Location: MyString
+
+two:
+  company: MyString
+  technology: MyString
+  experince: 1
+  pakage: 1
+  Location: MyString

@@ -1,0 +1,22 @@
+<%= form_with(model: next, local: true) do |form| %>
+  <% if next.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(next.errors.count, "error") %> prohibited this next from being saved:</h2>
+
+      <ul>
+      <% next.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :connection %>
+    <%= form.text_field :connection, id: :next_connection %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

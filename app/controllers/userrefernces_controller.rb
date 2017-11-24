@@ -1,0 +1,2 @@
+class UserreferncesController < ApplicationController
+end

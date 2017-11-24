@@ -1,0 +1,47 @@
+<%= form_with(model: adminref, local: true) do |form| %>
+  <% if adminref.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(adminref.errors.count, "error") %> prohibited this adminref from being saved:</h2>
+
+      <ul>
+      <% adminref.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :adminref_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :company %>
+    <%= form.text_field :company, id: :adminref_company %>
+  </div>
+
+  <div class="field">
+    <%= form.label :referealid %>
+    <%= form.number_field :referealid, id: :adminref_referealid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Location %>
+    <%= form.text_field :Location, id: :adminref_Location %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Experince_in_year %>
+    <%= form.number_field :Experince_in_year, id: :adminref_Experince_in_year %>
+  </div>
+
+  <div class="field">
+    <%= form.label :technology %>
+    <%= form.text_field :technology, id: :adminref_technology %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

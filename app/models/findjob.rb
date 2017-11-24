@@ -1,0 +1,2 @@
+class Findjob < ApplicationRecord
+end

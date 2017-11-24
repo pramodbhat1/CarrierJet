@@ -1,0 +1,10 @@
+<!--  -->
+
+<form  action="get_jobs" method="get">
+	<div class="field">
+	<%= select_tag "jobs", options_for_select(@arr)%>
+	</div>
+	<div>
+		<input type="submit" name="commit" value="Search" />
+	</div>
+</form>

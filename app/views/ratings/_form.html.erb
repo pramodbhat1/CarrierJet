@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: yellow;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    width: "1000px"
+    height:"160px";
+}
+
+li a:hover {
+    background-color: yellow;
+}
+</style>
+</head>
+<body>
+<div id="a">
+<%= form_tag  ratings_path ,:method =>'get' do %>
+<h1 style="text-align: center;">
+<%= text_field_tag :search ,params[:search],placeholder: 'Enter Your Current Track' %>
+<h3 style="text-align: center;">
+<%= submit_tag "CLICK HERE" %>
+<% end %>
+
+<ul>
+  <li><a class="active" href="#home">STUDENT</a></li>
+  <li><a href="#news">TRAINEE SOFTWARE DEVELOPER</a></li>
+  <li><a href="#contact">JUNIER SOFTWARE DEVELOPER</a></li>
+  <li><a href="#about">SENIOR SOFTWARE DEVELOPER</a></li>
+    <li><a href="#about"> GENERAL MANAGER</a></li>
+        <li><a href="#about"> SENIOR MANAGER</a></li>
+                <li><a href="#about"> CEO</a></li>
+
+</div>
+<div id="b">
+    <%= image_tag("wel1.jpg", size: "1280x500", alt: "Edit Entry") %>
+
+</div>
+
+
+</ul>
+
+</body>
+</html>

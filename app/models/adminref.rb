@@ -1,0 +1,2 @@
+class Adminref < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+module SuggestionboxesHelper
+end

@@ -1,0 +1,27 @@
+<%= form_with(model: suggestionbox, local: true) do |form| %>
+  <% if suggestionbox.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(suggestionbox.errors.count, "error") %> prohibited this suggestionbox from being saved:</h2>
+
+      <ul>
+      <% suggestionbox.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :langvage %>
+    <%= form.text_field :langvage, id: :suggestionbox_langvage %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bestcombination %>
+    <%= form.text_field :bestcombination, id: :suggestionbox_bestcombination %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

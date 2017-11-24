@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Adminrefs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Company</th>
+      <th>Referealid</th>
+      <th>Location</th>
+      <th>Experince in year</th>
+      <th>Technology</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @adminrefs.each do |adminref| %>
+      <tr>
+        <td><%= adminref.name %></td>
+        <td><%= adminref.company %></td>
+        <td><%= adminref.referealid %></td>
+        <td><%= adminref.Location %></td>
+        <td><%= adminref.Experince_in_year %></td>
+        <td><%= adminref.technology %></td>
+        <td><%= link_to 'Show', adminref %></td>
+        <td><%= link_to 'Edit', edit_adminref_path(adminref) %></td>
+        <td><%= link_to 'Destroy', adminref, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Adminref', new_adminref_path %>

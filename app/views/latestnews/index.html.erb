@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Latestnews</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Image</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @latestnews.each do |latestnews| %>
+      <tr>
+        <td><%= latestnews.title %></td>
+        <td><%= latestnews.description %></td>
+        <td><%= latestnews.image %></td>
+        <td><%= link_to 'Show', latestnews %></td>
+        <td><%= link_to 'Edit', edit_latestnews_path(latestnews) %></td>
+        <td><%= link_to 'Destroy', latestnews, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Latestnews', new_latestnews_path %>
